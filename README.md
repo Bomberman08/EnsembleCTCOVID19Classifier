@@ -1,5 +1,4 @@
 # EnsembleCTCOVID19Classifier
-Honours Project
 Note: you will need to have a python compiler installed on your computer to run this software. This software makes use
       of pre-trained Vgg16 and EfficientNetB5 transfer learning models to form hard and soft voting ensemble classifiers.
       The final classifier software makes use of a graphical interface and only uses the soft voting ensemble classifier to
