@@ -17,8 +17,8 @@ Step 5: Run the source code file "Prelim.py" which will install the relavent lib
         and will also randomly split the dataset into training, validation and test sets. Make sure to wait until
         the code has completed running and ensure you have internet connection. 
 
-Step 6: You have 3 files you can run from here. See Step 7 for running "CTClassifier.py", see Step 8 for running "EnsembleTester.py",
-        and see Step 9 for running "EnsembleTrainer.py". 
+Step 6: You have 3 files you can run from here. See step 7 for running "CTClassifier.py", see step 8 for running "EnsembleTester.py",
+         and see step 9 for running "EnsembleTrainer.py". 
 
 
 ***Note that you may see Warnings in your terminal when running each of the 3 python files.
