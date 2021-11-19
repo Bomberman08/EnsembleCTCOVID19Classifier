@@ -11,7 +11,7 @@ Step 2: Open the "TrainedModelsLink.txt" text file, copy and paste the link on y
         Download both folders and unzip them into the directory where you saved the source code files. Note that both
         folders "Vgg16" and "EfficientNetB5" must be unzipped and in the exact same directory as the source code files.      
 
-Step 3: Download the dataset using the link provided in the "Dataset.txt" file. 
+Step 3: Download the dataset using the link provided in the "LinkToDataset.txt" file. 
         Unzip the dataset.
 
 Step 4: Move the downloaded dataset folder to the directory that you saved the source code files.
