@@ -1,20 +1,25 @@
 # EnsembleCTCOVID19Classifier
-Note: you will need to have a python compiler installed on your computer to run this software. This software makes use
+Note: you will need to have a python interpreter installed on your computer to run this software. This software makes use
       of pre-trained Vgg16 and EfficientNetB5 transfer learning models to form hard and soft voting ensemble classifiers.
       The final classifier software makes use of a graphical interface and only uses the soft voting ensemble classifier to
       classify CT scans in real time.
 
-Step 1: Download and unzip the source code files and trained models from Github using the link provided in the Github.txt file.
+Step 1: Download and unzip the source code files from Github using the link provided in the "Github.txt file".
 
 Step 2: Open the "TrainedModelsLink.txt" text file, copy and paste the link on your web browser and hit search.
         You will be directed to a google drive page where there are 2 folders called "Vgg16" and "EfficientNetB5."
-        Download both folders and unzip them into the directory where you saved the source code files.       
+        Download both folders and unzip them into the directory where you saved the source code files. Note that both
+        folders "Vgg16" and "EfficientNetB5" must be unzipped and in the exact same directory as the source code files.      
 
-Step 3: Download the dataset using the link provided in the Dataset.txt file. 
+Step 3: Download the dataset using the link provided in the "Dataset.txt" file. 
+        Unzip the dataset.
 
-Step 4: Move the downloaded dataset to the directory that you saved the source code files.
+Step 4: Move the downloaded dataset folder to the directory that you saved the source code files.
+        Rename the dataset folder to "Dataset"
 
 Step 5: Open a python IDE or a terminal to run the source code files.
+        To run on command line, control directory or cd to the directory of the source code files.
+        Type python then press space bar and type in the name of the python file you want to run.
 
 Step 6: Run the source code file "Prelim.py" which will install the relavent libraries needed to run the code
         and will also randomly split the dataset into training, validation and test sets. Make sure to wait until
