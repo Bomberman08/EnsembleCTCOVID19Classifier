@@ -3,7 +3,7 @@ import seaborn as sns
 from sklearn.metrics import confusion_matrix
 from keras_preprocessing.image import ImageDataGenerator
 from keras.models import load_model
-
+import os
 
 
 class CTEnsembleTest:
@@ -204,18 +204,23 @@ class CTEnsembleTest:
 
 
 if __name__== "__main__":
-    tester = CTEnsembleTest()
+    if not(os.path.exists("SplitDataset")):
+        print("SplitDataset Folder not found. Testing cannot commence without the split data set. Please follow step 6 in the 'HowTo.txt' file.")
+    elif not(os.path.exists("Vgg16")) or not(os.path.exists("EfficientNetB5")):
+        print("One or more trianed models for Vgg16 and EfficientNetB5 are not found. Please follow step 2 of the 'HowTo.txt' file.")
+    else:
+        tester = CTEnsembleTest()
 
-    while True:
-        ensemble_option = input("Enter the ensemble method that you want to test: Enter hard (for hard voting) or soft (for soft voting) only\n>")
+        while True:
+            ensemble_option = input("Enter the ensemble method that you want to test: Enter hard (for hard voting) or soft (for soft voting) only\n>")
 
-        if (ensemble_option.lower() == "hard"):
-            tester.get_hard_vote()
-            break
+            if (ensemble_option.lower() == "hard"):
+                tester.get_hard_vote()
+                break
 
-        elif (ensemble_option.lower() == "soft"):
-            tester.get_soft_vote()
-            break
+            elif (ensemble_option.lower() == "soft"):
+                tester.get_soft_vote()
+                break
 
-        else:
-            print("Please enter only hard (for hard voting) or soft (for soft voting)")
+            else:
+                print("Please enter only hard (for hard voting) or soft (for soft voting)")

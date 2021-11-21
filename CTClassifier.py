@@ -5,6 +5,7 @@ from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 import logging
+import os
 
 class COVIDCT_Classifier_GUI:
 
@@ -89,4 +90,7 @@ class COVIDCT_Classifier_GUI:
 
 
 if __name__=="__main__":
-    COVIDCT_Classifier_GUI()
+    if not(os.path.exists("Vgg16")) or not(os.path.exists("EfficientNetB5")):
+        print("One or more trianed models for Vgg16 and EfficientNetB5 are not found. Please follow step 2 of the 'HowTo.txt' file.")
+    else:
+        COVIDCT_Classifier_GUI()

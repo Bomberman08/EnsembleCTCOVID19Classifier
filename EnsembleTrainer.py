@@ -7,6 +7,7 @@ import tensorflow as tf
 from tensorflow.keras.callbacks import ReduceLROnPlateau
 from tensorflow.keras.applications import efficientnet
 from tensorflow.keras.applications import vgg16
+import os
 
 
 class CTEnsembleTrain:
@@ -123,5 +124,8 @@ class CTEnsembleTrain:
 
 
 if __name__== "__main__":
-    trainer = CTEnsembleTrain()
-    trainer.train_models()
+    if not(os.path.exists("SplitDataset")):
+        print("SplitDataset Folder not found. Training cannot commence without the split data set. Please follow step 6 in the 'HowTo.txt' file.")
+    else:
+        trainer = CTEnsembleTrain()
+        trainer.train_models()
